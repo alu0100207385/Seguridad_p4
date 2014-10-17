@@ -12,13 +12,21 @@ Implementar el algoritmo Rijndael
     - Expansión de la clave obteniendo 10 subclaves a partir de la clave original usando la constante de iteración 
     + Etapa inicial: AddRoundKey entre el bloque de entrada y la clave original
     + 9 Iteraciones de:
+    
       1) SubBytes — usando la S-Caja
+      
       2) ShiftRow
+      
       3) MixColumn — multiplicando una matriz por los cuatro bytes de cada columna, operando con bytes.
+      
       4) AddRoundKey — con la subclave correspondiente a la iteración
+      
     + Etapa final:
+    
       1) SubBytes
+      
       2) ShiftRows
+      
       3) AddRoundKey — con la última subclave
 
 ------------------------------------
@@ -85,6 +93,7 @@ Constantes de iteración para Expansión de claves: 32 bits correspondientes a: 
 2. El programa debe solicitar:
     - Clave (16 bytes en hexadecimal)
     + Bloque de Texto Original (16 bytes en hexadecimal)
+    
     Debe devolver:
       - Las 10 subclaves
       + El Estado resultado de cada iteración
@@ -98,12 +107,12 @@ Antes de nada debemos compilar:
 `
 
 Para ejecutar en Linux:
-`
+```
     ./aes (o nombre de salida escogido)
     
     Introduzca ./aes nombre_fichero
     Se adjuntan dos ficheros para pruebas: input1 y input2
-`
+```
 
 ##Ejemplo
 
